@@ -1,0 +1,28 @@
+
+<table class="table table-condensed table-striped table-hover"  >
+    <thead> 
+        <tr>
+            <th>ID</th>
+            <th>Author</th>
+            <th>Gender</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor='let authors of author'>
+            <td  (click)="onClickAuthorId(authors.id)">{{ authors.id }}</td>
+            <td >{{ authors.author}}</td>
+            <td >{{ authors.birth }} </td>
+            <td>{{ authors.gender}}</td>
+            <td>{{ authors.description }}</td>
+            <button class="btn btn-primary" (click)="onRemoveClick(authors.id)">Delete Author</button>
+        </tr>
+      
+        
+    </tbody>
+</table>
+
+<div class="registerButton">
+     <button class="btn btn-primary" (click)="onClickAuthor()">Back to Register</button>
+</div>
+
